@@ -1,0 +1,290 @@
+import styled from 'styled-components';
+
+export const HeaderWrapper = styled.div`
+  width: 100%;
+  position: fixed;
+  z-index: 1200;
+  top: 0px;
+
+  div.wrap {
+    box-sizing: border-box;
+    padding-top: 0rem;
+    padding-right: 0rem;
+    padding-bottom: 0rem;
+    padding-left: 0rem;
+    margin-top: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+    margin-left: 0rem;
+    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+    div.content {
+      z-index: 1100;
+      display: none;
+
+      @media (min-width: 48rem) {
+        display: block;
+      }
+      @media (min-width: 64rem) {
+        display: block;
+      }
+    }
+  }
+`;
+
+export const HeaderTag = styled.header`
+  z-index: 1200;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 64px;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid rgb(229, 227, 221);
+  grid-column-gap: 1rem;
+  padding: 0px 1rem;
+`;
+
+export const HeaderLeft = styled.div`
+  display: flex;
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+
+    span {
+      height: 1.5rem;
+      width: 1.5rem;
+
+      svg {
+        overflow: hidden;
+        align-self: center;
+        stroke-width: 1.2px;
+        height: 1.5rem;
+        width: 1.5rem;
+
+        [data-fill='1'] {
+          fill: rgb(249, 104, 84);
+        }
+      }
+    }
+  }
+`;
+
+export const HeaderRight = styled.div`
+  justify-self: end;
+
+  ul {
+    margin: 0px;
+    padding: 0px;
+    align-items: center;
+    display: flex;
+    list-style: none;
+
+    li {
+      position: relative;
+      display: inline-flex;
+    }
+  }
+`;
+
+export const LinkMenuWrap = styled.div`
+  @media (min-width: 64rem) {
+    padding-right: 0rem;
+    padding-left: 1.125rem;
+  }
+
+  box-sizing: border-box;
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-bottom: 0rem;
+  padding-left: 1.0125rem;
+  margin-top: 0rem;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
+  transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+  a {
+    color: rgb(34, 29, 17);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+`;
+
+export const InputSearchWrap = styled.div`
+  box-sizing: border-box;
+  padding-top: 0rem;
+  padding-right: 0.28125rem;
+  padding-bottom: 0rem;
+  padding-left: 0.84375rem;
+  margin-top: 0rem;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+  margin-left: 0rem;
+  transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+  @media (min-width: 64rem) {
+    padding-left: 0.9375rem;
+    padding-right: 0.3125rem;
+  }
+
+  a {
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    padding: 1rem 0rem;
+
+    div {
+      box-sizing: border-box;
+      display: block;
+      padding-top: 0rem;
+      padding-right: 0rem;
+      padding-bottom: 0rem;
+      padding-left: 0rem;
+      margin-top: 0rem;
+      margin-right: 0rem;
+      margin-bottom: 0rem;
+      margin-left: 0rem;
+      transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+      @media (min-width: 48rem) {
+        display: flex;
+      }
+
+      div {
+        box-sizing: border-box;
+        -webkit-box-flex: 2;
+        flex-grow: 2;
+        padding-top: 0rem;
+        padding-right: 0rem;
+        padding-bottom: 0rem;
+        padding-left: 0rem;
+        margin-top: 0rem;
+        margin-right: 0rem;
+        margin-bottom: 0rem;
+        margin-left: 0rem;
+        transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+      }
+    }
+  }
+`;
+
+export const FormControl = styled.form`
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 0em;
+
+  div.searchForm {
+    background-color: rgb(245, 244, 242);
+    cursor: default;
+    position: absolute;
+    right: 0px;
+    width: auto;
+    z-index: 1000;
+    border-radius: 9999px;
+    padding: 0.5rem 0.75rem;
+
+    div {
+      align-self: center;
+      box-sizing: border-box;
+      position: relative;
+      padding-top: 0rem;
+      padding-right: 0rem;
+      padding-bottom: 0rem;
+      padding-left: 0rem;
+      margin-top: 0rem;
+      margin-right: 0rem;
+      margin-bottom: 0rem;
+      margin-left: 0rem;
+      transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+      div {
+        background-color: transparent;
+        margin-bottom: 0px;
+        cursor: pointer;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+        padding: 0px;
+
+        div {
+          align-items: center;
+          box-sizing: border-box;
+          display: flex;
+          padding-top: 0rem;
+          padding-right: 0rem;
+          padding-bottom: 0rem;
+          padding-left: 0rem;
+          margin-top: 0rem;
+          margin-right: 0rem;
+          margin-bottom: 0rem;
+          margin-left: 0rem;
+          transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+          div {
+            align-self: center;
+            -webkit-box-align: center;
+            align-items: center;
+            display: inline-flex;
+            filter: none;
+            cursor: pointer;
+            vertical-align: unset;
+            height: unset;
+            width: unset;
+
+            span.iconSearch {
+              height: 1rem;
+              width: 1rem;
+
+              svg {
+                overflow: hidden;
+                align-self: center;
+                fill: transparent;
+                stroke-width: 1.2px;
+                height: 1rem;
+                width: 1rem;
+
+                [data-stroke] {
+                  stroke: rgb(112, 108, 100);
+                  fill: transparent;
+                  vector-effect: non-scaling-stroke;
+                  transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+                }
+              }
+            }
+          }
+
+          input {
+            background-color: rgb(245, 244, 242);
+            font-weight: 500;
+            line-height: 1rem;
+            padding-left: 0.75rem;
+            text-overflow: ellipsis;
+            width: 13rem;
+            z-index: 900;
+            font-size: 1rem;
+            border-width: 0px;
+            border-style: initial;
+            border-color: initial;
+            border-image: initial;
+            transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+`;
