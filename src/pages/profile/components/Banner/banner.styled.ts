@@ -51,6 +51,9 @@ export const BannerContainer = styled.div`
           overflow: hidden;
           background-repeat: no-repeat;
           background-position: center center;
+          width: 5rem;
+          min-width: 5rem;
+          height: 5rem;
 
           @media (min-width: 48rem) {
             width: 10rem;

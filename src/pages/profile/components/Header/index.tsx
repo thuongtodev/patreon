@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
   HeaderWrapper,
@@ -8,13 +8,109 @@ import {
   HeaderRight,
   InputSearchWrap,
   FormControl,
+  MobileWrap,
+  HeaderContainer,
+  MenuIcon,
 } from './header.styled';
 
 interface Props {}
 
 const Header: React.FC<Props> = () => {
+  const [open, setOpen] = useState(false);
+
+  const styledOpen = open
+    ? { right: 0, bottom: 0, height: '100%', overflow: 'auto' }
+    : {};
   return (
     <HeaderWrapper>
+      <div className="wrap">
+        <MobileWrap style={styledOpen}>
+          <div>
+            <HeaderContainer>
+              <HeaderLeft>
+                <a href="/">
+                  <span>
+                    <svg
+                      height="546px"
+                      version="1.1"
+                      viewBox="0 0 569 546"
+                      width="569px"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <title>Patreon logo</title>
+                      <g>
+                        <circle
+                          cx="362.589996"
+                          cy="204.589996"
+                          data-fill="1"
+                          r="204.589996"
+                        ></circle>
+                        <rect
+                          data-fill="2"
+                          height="545.799988"
+                          width="100"
+                          x="0"
+                          y="0"
+                        ></rect>
+                      </g>
+                    </svg>
+                  </span>
+                </a>
+              </HeaderLeft>
+
+              <HeaderRight>
+                <ul>
+                  <li>
+                    <LinkMenuWrap>
+                      <a href="/login">Log in</a>
+                    </LinkMenuWrap>
+                  </li>
+                  <li>
+                    <LinkMenuWrap>
+                      <a>
+                        <MenuIcon>
+                          <span className="menu">
+                            {!open && (
+                              <svg
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                onClick={() => setOpen(true)}
+                              >
+                                <path
+                                  d="M2.25 18.003h19.5M2.25 12.003h19.5M2.25 6.003h19.5"
+                                  data-stroke="1"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                ></path>
+                              </svg>
+                            )}
+
+                            {open && (
+                              <svg
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                                onClick={() => setOpen(false)}
+                              >
+                                <path
+                                  d="M21 3l-9 9m-9 9l9-9m0 0l9 9m-9-9L3 3"
+                                  data-stroke="1"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="bevel"
+                                ></path>
+                              </svg>
+                            )}
+                          </span>
+                        </MenuIcon>
+                      </a>
+                    </LinkMenuWrap>
+                  </li>
+                </ul>
+              </HeaderRight>
+            </HeaderContainer>
+          </div>
+        </MobileWrap>
+      </div>
+
       <div className="wrap">
         <div className="content">
           <HeaderTag>

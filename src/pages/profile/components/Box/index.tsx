@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { BoxContainer, Card } from './box.styled';
+import { BoxContainer, Card, ShowMore } from './box.styled';
 
 interface Props {}
 
 const Box: React.FC<Props> = () => {
+  const [show, setShow] = useState(false);
+
+  const style = show ? { height: '100%' } : {};
   return (
     <BoxContainer>
       <div className="box">
@@ -31,13 +34,21 @@ const Box: React.FC<Props> = () => {
               </div>
             </div>
 
-            <div className="content">
+            <div className="contentBox" style={style}>
               🍌 A banana a month. Becoming a patron on this tier will let you
               read our secret articles here. If you just want to support us and
               read our articles and updates, this is the one! With this tier,
               you're fuelling our days of creation and the tons of hours we
               spend listening to music a month. And that is awesome, thank you.
             </div>
+
+            {!show && (
+              <ShowMore>
+                <button onClick={() => setShow(true)} className="showMore">
+                  Show More
+                </button>
+              </ShowMore>
+            )}
           </Card>
         </div>
       </div>
