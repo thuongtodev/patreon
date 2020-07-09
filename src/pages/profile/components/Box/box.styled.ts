@@ -222,29 +222,32 @@ export const Card = styled.div`
   }
 
   div.contentBox {
-    align-items: flex-start;
-    align-content: flex-start;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    -webkit-box-pack: start;
-    justify-content: flex-start;
-    padding-top: 0rem;
-    padding-right: 0rem;
-    padding-bottom: 0rem;
-    padding-left: 0rem;
-    margin-top: 0rem;
-    margin-right: 0rem;
-    margin-bottom: 0rem;
-    margin-left: 0rem;
-    transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
-
     position: relative;
-    height: 40px;
     overflow: hidden;
     transition: all 500ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    padding-bottom: 1rem;
   }
+`;
+
+export const Fade = styled.div`
+  background: linear-gradient(
+    to bottom,
+    rgba(100, 100, 100, 0) 0%,
+    #ececec 75%
+  );
+  height: 100px;
+  margin-top: -150px;
+  position: relative;
+`;
+
+export const ShowMoreContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  text-align: center;
+  background: white;
+  width: 100%;
+  height: 70px;
 `;
 
 export const ShowMore = styled.div`
@@ -261,6 +264,7 @@ export const ShowMore = styled.div`
   transition: all 300ms cubic-bezier(0.19, 1, 0.22, 1) 0s;
 
   button.showMore {
+    margin-top: 10px;
     color: rgb(53, 142, 202);
     cursor: pointer;
     display: inline-block;

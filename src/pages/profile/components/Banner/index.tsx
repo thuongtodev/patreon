@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { BannerContainer } from './banner.styled';
 import background from './background.jpg';
+import ModalVideo from '../ModalVideo';
 
 interface Props {}
 
 const Banner: React.FC<Props> = () => {
+  const [open, setOpen] = useState(false);
+  const onOpenModal = () => {
+    setOpen(!open);
+  };
   return (
     <BannerContainer>
+      <ModalVideo open={open} toggleModal={onOpenModal} />
       <div>
         <div
           className="banner"
@@ -16,7 +22,7 @@ const Banner: React.FC<Props> = () => {
           }}
         >
           <div>
-            <a href="">
+            <a onClick={() => setOpen(true)}>
               <div className="imageBanner"></div>
             </a>
           </div>
