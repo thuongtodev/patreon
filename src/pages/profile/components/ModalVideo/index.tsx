@@ -27,7 +27,7 @@ const ModalVideo: React.FC<Props> = ({ open, toggleModal }) => {
     <Modal isOpen={open} onRequestClose={toggleModal} style={customStyles}>
       <div
         onClick={() => toggleModal()}
-        style={{ textAlign: 'right', marginRight: '-15px' }}
+        style={{ textAlign: 'right', marginRight: '-15px', cursor: 'pointer' }}
       >
         <img src={closeIcon} alt="" />
       </div>
