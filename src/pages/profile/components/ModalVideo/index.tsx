@@ -25,20 +25,28 @@ interface Props {
 const ModalVideo: React.FC<Props> = ({ open, toggleModal }) => {
   return (
     <Modal isOpen={open} onRequestClose={toggleModal} style={customStyles}>
-      <div
-        onClick={() => toggleModal()}
-        style={{ textAlign: 'right', marginRight: '-15px', cursor: 'pointer' }}
-      >
-        <img src={closeIcon} alt="" />
+      <div style={{ position: 'relative' }}>
+        <div
+          onClick={() => toggleModal()}
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            cursor: 'pointer',
+            zIndex: 9999999,
+          }}
+        >
+          <img src={closeIcon} alt="" />
+        </div>
+        <ReactPlayer
+          url="https://storage.googleapis.com/superpeer-prod.appspot.com/hosts/Wrg3QfdEPDmrjE8jQkLU/video-1591320054285-transcoded.mp4?fbclid=IwAR16D4raG-L50EW-If5O53Lvh3ASeAb_FNb02FuQLixtGosNFPvl9VSlMB0"
+          playing
+          loop
+          controls
+          width="100%"
+          height="100%"
+        />
       </div>
-      <ReactPlayer
-        url="https://storage.googleapis.com/superpeer-prod.appspot.com/hosts/Wrg3QfdEPDmrjE8jQkLU/video-1591320054285-transcoded.mp4?fbclid=IwAR16D4raG-L50EW-If5O53Lvh3ASeAb_FNb02FuQLixtGosNFPvl9VSlMB0"
-        playing
-        loop
-        controls
-        width="100%"
-        height="100%"
-      />
     </Modal>
   );
 };
