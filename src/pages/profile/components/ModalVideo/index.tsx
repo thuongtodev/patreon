@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactPlayer from 'react-player';
 import Modal from 'react-modal';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaVolumeMute, FaVolumeUp } from 'react-icons/fa';
+import { useMedia } from 'react-media';
 
 const customStyles = {
   content: {
@@ -25,7 +26,12 @@ interface Props {
 
 const ModalVideo: React.FC<Props> = ({ open, toggleModal }) => {
   const [mute, setMute] = useState(false);
-
+  const isSmallScreen = useMedia({ query: '(max-width: 599px)' });
+  useEffect(() => {
+    if (isSmallScreen) {
+      setMute(true);
+    }
+  }, [isSmallScreen]);
   return (
     <Modal isOpen={open} onRequestClose={toggleModal} style={customStyles}>
       <div style={{ position: 'relative' }}>

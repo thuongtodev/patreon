@@ -49,7 +49,7 @@ const Social: React.FC<Props> = ({ data }) => {
                           cx="32"
                           cy="32"
                           r="32"
-                          stroke-linecap="round"
+                          strokeLinecap="round"
                           className="light"
                         ></circle>
                       </svg>
@@ -59,10 +59,10 @@ const Social: React.FC<Props> = ({ data }) => {
                         <span>
                           <svg viewBox="0 0 24 24" height="100%" width="100%">
                             <path
-                              clip-rule="evenodd"
+                              clipRule="evenodd"
                               d="M13.319 24H8.976V12.788H6v-4.1h2.893c.11-.142.072-.257.072-.361 0-1.046.01-2.097 0-3.154 0-.667.11-1.319.351-1.943C9.96 1.593 11.2.657 12.868.225c1.06-.269 2.136-.247 3.212-.187.527.033 1.049.039 1.614.148-.033 1.26-.06 2.513-.093 3.745-.143.093-.247.06-.362.06-.747 0-1.505 0-2.251-.011-.23 0-.45.022-.67.071-.527.11-.84.422-.944.947-.033.159-.05.318-.05.487-.01 1.013-.01 2.026-.01 3.039 0 .038.021.082.037.148h4.365c-.071 1.385-.131 2.737-.197 4.1h-4.195c-.005 3.76-.005 7.478-.005 11.228z"
                               data-fill="1"
-                              fill-rule="evenodd"
+                              fillRule="evenodd"
                             ></path>
                           </svg>
                         </span>
@@ -91,7 +91,7 @@ const Social: React.FC<Props> = ({ data }) => {
                           cx="32"
                           cy="32"
                           r="32"
-                          stroke-linecap="round"
+                          strokeLinecap="round"
                           className="light"
                         ></circle>
                       </svg>
@@ -131,7 +131,7 @@ const Social: React.FC<Props> = ({ data }) => {
                           cx="32"
                           cy="32"
                           r="32"
-                          stroke-linecap="round"
+                          strokeLinecap="round"
                           className="light"
                         ></circle>
                       </svg>
@@ -188,7 +188,7 @@ const Social: React.FC<Props> = ({ data }) => {
                         cx="32"
                         cy="32"
                         r="32"
-                        stroke-linecap="round"
+                        strokeLinecap="round"
                         className="light"
                       ></circle>
                     </svg>
@@ -208,8 +208,8 @@ const Social: React.FC<Props> = ({ data }) => {
                             data-fill="1"
                             data-stroke="1"
                             r="2.33"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           ></circle>
                           <circle
                             cx="12"
@@ -217,8 +217,8 @@ const Social: React.FC<Props> = ({ data }) => {
                             data-fill="1"
                             data-stroke="1"
                             r="2.33"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           ></circle>
                           <circle
                             cx="19.66"
@@ -226,8 +226,8 @@ const Social: React.FC<Props> = ({ data }) => {
                             data-fill="1"
                             data-stroke="1"
                             r="2.33"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           ></circle>
                         </svg>
                       </span>
